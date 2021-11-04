@@ -37,7 +37,7 @@ public class UserController {
                                                       @PageableDefault(page = 0, size = 10, sort = "userId", direction = Sort.Direction.ASC) Pageable pageable){
 
         Page<UserModel> userModelPage = userService.findAll(spec,pageable);
-
+//skjds
         if(!userModelPage.isEmpty()){
             for(UserModel userModel : userModelPage.toList()){
                 userModel.add(linkTo(methodOn(UserController.class).getOneUser(userModel.getUserId())).withSelfRel());
