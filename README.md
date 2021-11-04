@@ -1,2 +1,8 @@
 # decoder-project
-Projeto de microservico utilizando a stack spring.
+Projeto de microservicos utilizando a stack spring.
+Utilizando os seguintes frameworks:
+	- Spring Boot
+	- Spring Validation
+	- Spring Hateoas
+	- Spring Data
+	- Specification Arg Resolver
