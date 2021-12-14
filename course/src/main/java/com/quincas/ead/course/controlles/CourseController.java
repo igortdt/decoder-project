@@ -84,7 +84,8 @@ public class CourseController {
 
         return ResponseEntity.status(HttpStatus.OK).body(courseService.findAll(spec, pageable));
     }
-    
+
+
     @GetMapping("/{courseId}")
     public ResponseEntity<Object> getOneCourse(@PathVariable(value = "courseId") UUID courseId){
         Optional<CourseModel> courseModelOptional = courseService.findById(courseId);
