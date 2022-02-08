@@ -6,6 +6,7 @@ import com.quincas.ead.authuser.enums.UserStatus;
 import com.quincas.ead.authuser.enums.UserType;
 import com.quincas.ead.authuser.models.UserModel;
 import com.quincas.ead.authuser.services.UserService;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 
+@Log4j2
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/auth")
@@ -51,5 +53,13 @@ public class AuthenticationController {
 
     }
 
-
+    @GetMapping("/")
+    public String index(){
+        log.trace("Log for trace...");
+        log.debug("Log debug...");
+        log.info("Log info...");
+        log.warn("Log warn...");
+        log.error("Log error...");
+        return "Logging spring-boot...";
+    }
 }
