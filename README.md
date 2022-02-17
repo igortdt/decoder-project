@@ -9,3 +9,7 @@ Utilizando os seguintes frameworks:
 - Spring Hateoas
 - Spring Data
 - Specification Arg Resolver
+- Spring Eureka
+- Service Registry
+- Api Composition Pattern
+- Spring Cloud Gateway
