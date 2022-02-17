@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -39,7 +38,7 @@ public class UserController {
                                                        @PageableDefault(page = 0, size = 10, sort = "userId", direction = Sort.Direction.ASC) Pageable pageable,
                                                        @RequestParam(required = false) UUID courseId){
         Page<UserModel> userModelPage = null;
-        if(Objects.nonNull(courseId)){
+        if(courseId != null){
             userModelPage = userService.findAll(SpecificationTemplate.userCourseId(courseId).and(spec), pageable);
         } else {
             userModelPage = userService.findAll(spec, pageable);
