@@ -8,9 +8,9 @@ Utilizando os seguintes frameworks:
 - Spring Validation
 - Spring Hateoas
 - Spring Data
-- Specification Arg Resolver
+- Specification Arg Resolver (query database)
 - Spring Eureka
 - Service Registry
 - Api Composition Pattern
 - Spring Cloud Gateway
--
+- Asynchronous Communication using RabbitMQ
